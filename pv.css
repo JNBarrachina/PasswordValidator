@@ -26,7 +26,10 @@ body {
 }
 
 input {
-    padding: 0.4rem;
+    padding: 0.6rem;
+
+    border: 1px solid black;
+    border-radius: 1rem;
 }
 
 .textValidation {
