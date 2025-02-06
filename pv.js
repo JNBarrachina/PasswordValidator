@@ -1,10 +1,8 @@
 const inputPass = document.getElementById("inputPassword");
-inputPass.addEventListener("key", validatePassword);
-let password = "";
+inputPass.addEventListener("input", validatePassword);
 
 function validatePassword() {
-    password += document.getElementById("inputPassword").value;
-    console.log(password);
+    let password = document.getElementById("inputPassword").value;
 
     if (password.length > 10) {
         document.getElementById("validatorText").innerText =
@@ -13,7 +11,7 @@ function validatePassword() {
         document.getElementById("validatorText").style.visibility = "visible";
     }
 
-    if (password.length < 10 && password.length > 8) {
+    if (password.length < 10 && password.length >= 8) {
         document.getElementById("validatorText").innerText =
             "La contraseña no es demasiado segura";
         document.getElementById("validatorText").style.color = "orange";
