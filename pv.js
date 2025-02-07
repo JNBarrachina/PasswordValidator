@@ -35,3 +35,10 @@ function validatePassword() {
 }
 
 document.body.appendChild(login);
+
+function loginLog() {
+    let name = document.getElementById("inputName").value;
+    alert(name)
+}
+
+login.addEventListener("click", loginLog)
