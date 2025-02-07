@@ -13,7 +13,7 @@ function validatePassword() {
 
     if (password.length < 10 && password.length >= 8) {
         document.getElementById("validatorText").innerText =
-            "La contraseña no es demasiado segura";
+            "La contraseña no es demasiado segura.";
         document.getElementById("validatorText").style.color = "orange";
         document.getElementById("validatorText").style.visibility = "visible";
     }
