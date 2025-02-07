@@ -11,10 +11,10 @@ login.setAttribute('disabled', "true");
 login.innerText = 'Login';
 
 function refreshValidator() {
-    validatePassword();
+    validatePasswordAndName();
 }
 
-function validatePassword() {
+function validatePasswordAndName() {
     let changeText = document.getElementById("validatorText");
     let password = inputPass.value.length;
     let name = inputName.value.length;
