@@ -1,6 +1,6 @@
 const inputName = document.getElementById("inputName")
 const inputPass = document.getElementById("inputPassword");
-inputPass.addEventListener("input", validatePassword);
+// inputPass.addEventListener("input", validatePassword);
 
 const login = document.createElement("button");
 
@@ -10,10 +10,19 @@ login.setAttribute('disabled', "true");
 
 login.innerText = 'Login';
 
+function refreshValidator() {
+    validatePassword();
+}
+
 function validatePassword() {
     let changeText = document.getElementById("validatorText");
-    let password = document.getElementById("inputPassword").value.length;
-    let name = document.getElementById("inputName").value.length;
+    let password = inputPass.value.length;
+    let name = inputName.value.length;
+
+    if (name === 0 || password === 0) {
+        login.setAttribute("disabled", "true");
+        login.style.backgroundColor = "grey";
+    }
 
     if (password > 10 && name > 0) {
         changeText.innerText = "¡Contraseña segura!";
@@ -41,4 +50,6 @@ function loginLog() {
     alert(name)
 }
 
+
+addEventListener("keyup", refreshValidator)
 login.addEventListener("click", loginLog)
