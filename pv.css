@@ -34,9 +34,32 @@ input {
 }
 
 .textValidation {
+    visibility: hidden;
+}
+
+.noSegura {
     text-align: center;
     font-size: 1.4rem;
     font-weight: bold;
 
-    visibility: hidden;
+    color: red;
+    visibility: visible;
+}
+
+.medioSegura {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    color: orange;
+    visibility: visible;
+}
+
+.segura {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    color: green;
+    visibility: visible;
 }
