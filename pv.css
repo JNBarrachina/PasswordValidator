@@ -63,3 +63,11 @@ input {
     color: green;
     visibility: visible;
 }
+
+#login {
+    padding: 0.6rem;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: gray;
+}
