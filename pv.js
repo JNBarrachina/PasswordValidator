@@ -22,6 +22,9 @@ function validatePasswordAndName() {
     if (name === 0 || password === 0) {
         login.setAttribute("disabled", "true");
         login.style.backgroundColor = "grey";
+        changeText.innerText = "Introduce un nombre";
+        changeText.setAttribute("class", "nombre")
+
     }
 
     if (password > 10 && name > 0) {
