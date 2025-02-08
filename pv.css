@@ -70,8 +70,13 @@ input {
 
 #login {
     padding: 0.6rem;
-
     border: 1px solid black;
     border-radius: 1rem;
     background-color: gray;
+    color: white;
+    font-weight: bold;
+}
+
+#login:enabled {
+    cursor: pointer;
 }

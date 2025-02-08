@@ -1,14 +1,11 @@
-const inputName = document.getElementById("inputName")
+const inputName = document.getElementById("inputName");
 const inputPass = document.getElementById("inputPassword");
 // inputPass.addEventListener("input", validatePassword);
 
 const login = document.createElement("button");
-
 login.setAttribute("id", "login");
-login.setAttribute('disabled', "true");
-
-
-login.innerText = 'Login';
+login.setAttribute("disabled", "true");
+login.innerText = "Login";
 
 function refreshValidator() {
     validatePasswordAndName();
@@ -23,8 +20,7 @@ function validatePasswordAndName() {
         login.setAttribute("disabled", "true");
         login.style.backgroundColor = "grey";
         changeText.innerText = "Introduce un nombre";
-        changeText.setAttribute("class", "nombre")
-
+        changeText.setAttribute("class", "nombre");
     }
 
     if (password > 10 && name > 0) {
@@ -32,7 +28,6 @@ function validatePasswordAndName() {
         changeText.setAttribute("class", "segura");
         login.style.backgroundColor = "blue";
         login.removeAttribute("disabled");
-
     }
 
     if (password < 10 && password >= 8) {
@@ -50,9 +45,8 @@ document.body.appendChild(login);
 
 function loginLog() {
     let name = document.getElementById("inputName").value;
-    alert(name)
+    alert(name);
 }
 
-
-addEventListener("keyup", refreshValidator)
-login.addEventListener("click", loginLog)
+addEventListener("keyup", refreshValidator);
+login.addEventListener("click", loginLog);
