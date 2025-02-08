@@ -64,6 +64,10 @@ input {
     visibility: visible;
 }
 
+.nombre {
+    color: red;
+}
+
 #login {
     padding: 0.6rem;
 
